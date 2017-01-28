@@ -1,0 +1,15 @@
+// function takes two arrays and tests if all the letters of arr2 are in arr1
+
+// string.prototype.indexOf() returns index within string of the first occurrence of specified value
+
+function mutation([arr1, arr2]) {
+  var test = [];
+  test = arr2.toLowerCase().split('');
+  var target = [];
+  target = arr1.toLowerCase().split('');
+  for (var i = 0; i < test.length; i++) {
+    if (target.indexOf(test[i]) < 0)
+      return false;
+  }
+  return true;
+ }
