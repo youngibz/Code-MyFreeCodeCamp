@@ -1,0 +1,10 @@
+// function takes a string, splits it into characters, reverses the order, and then joins them
+
+function reverseString(str) {
+  return str.split('').reverse().join('');
+ 
+   
+}
+
+reverseString("hello");
+
