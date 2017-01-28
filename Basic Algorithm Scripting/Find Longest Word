@@ -1,0 +1,23 @@
+/* function takes a string and then returns the longest word
+
+  first splits string into an array of word and then declares a variable
+  
+  loop over length of array. If length ith word of array is greater than maxLength
+  then maxLength becomes that length
+
+*/
+function findLongestWord(str) {
+  array = str.split(' ');
+  maxLength = 0;
+  for (var i = 0; i < array.length; i++) {
+    if (array[i].length > maxLength) {
+      maxLength = array[i].length;
+    }
+    
+  }
+  
+  return maxLength;
+}
+
+findLongestWord("The quick brown fox jumped over the lazy dog");
+
