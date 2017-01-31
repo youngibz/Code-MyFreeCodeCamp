@@ -1,0 +1,18 @@
+// function takes an array and a number as arguments, and then returns the index of the number in the newly sorted array
+
+function getIndexToIns(arr, num) {
+  // push num to end of array
+  arr.push(num);
+  //function sorts in ascending order
+  arr.sort(function(a,b){
+    return a - b;
+  })
+  //return index of num
+  return arr.indexOf(num);
+ 
+  
+  
+}
+
+getIndexToIns([40, 60], 50);
+
