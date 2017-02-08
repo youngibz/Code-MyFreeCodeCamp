@@ -1,0 +1,28 @@
+//function that takes a string and performs a ROT13 cipher
+
+function rot13(str) { // LBH QVQ VG!
+ 
+ // declare new array
+ var newArray = [];
+ //iterate over each character in string
+ for(var i = 0; i < str.length; i++) {
+   //check if character is alphanumeric, if not push it as is to array
+   if(str.charCodeAt(i) < 65 || str.charCodeAt(i) > 90) {
+      newArray.push(str.charAt(i));
+     
+   } 
+   //check if character is greater or less than 'N'
+   else if(str.charCodeAt(i) < 78) {
+      newArray.push(String.fromCharCode(str.charCodeAt(i) + 13));
+   }
+   else {
+      newArray.push(String.fromCharCode(str.charCodeAt(i) - 13));
+     
+   }
+ }
+ 
+ //join
+ return newArray.join("");
+  
+  
+}
